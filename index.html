@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Lista de Séries</title>
 
@@ -17,11 +17,11 @@
     </header>
     <main>
         <div>
-            <input type="text" name="NomeSerie" id="SearchBar" placeholder="Pesquise Aqui">
-            <button type="submit">Procure a série</button>
+            <input type="text" name="nomeSerie" id="searchBar" placeholder="Pesquise Aqui">
+            <button onclick="buscaShows()">Procure a série</button>
         </div>
         <section class="objeto">
-            <section class="card" id="veronica">
+            <article class="card" id="veronica">
                 <div id="imagem"> <img src="./img/veronica.gif" alt="Verônica Mars piscando para a camera"></div>
                 <ul>
                     <li><a href="https://veronicamars.fandom.com/wiki/Veronica_Mars" target="_blank">Veronica Mars</a></li>
@@ -32,9 +32,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: HBO Max, Hulu, Prime Video</li>
                  </ul>
-            </section>
+            </article>
 
-            <section class="card" id="MMFD">
+            <article class="card" id="MMFD">
                 <div id="imagem"><img src="./img/MMFD.gif" alt="Finn abraçando Ray"></div>
                 <ul>
                     <li><a href="https://mmfd.fandom.com/wiki/My_Mad_Fat_Diary" target="_blank">My Mad Fat Diary</a></li>
@@ -43,9 +43,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: Hulu, Prime Video, Apple TV </li>
                 </ul>
-            </section>
+            </article>
 
-            <section class="card" id="office">
+            <article class="card" id="office">
                 <div id="imagem"><img src="./img/theoffice.gif" alt="Michael Scott olhando para a tela"></div>
                 <ul>
                     <li><a href="https://www.imdb.com/title/tt0386676/" target="_blank">The Office</a></li>
@@ -54,9 +54,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: Prime Video, Paramount+, Oi Play, HBO Max</li>
                 </ul>
-            </section>
+            </article>
 
-            <section class="card" id="orphan">
+            <article class="card" id="orphan">
                 <div id="imagem"> <img src="./img/orphanblack.gif" alt="Uma das personagens sendo sequestrada."></div>
                 <ul>
                     <li><a href="https://orphanblack.fandom.com/wiki/Orphan_Black_Wiki" target="_blank">Orphan Black</a></li>
@@ -65,9 +65,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: Paramount+, Prime Video</li>
                 </ul>
-            </section>
+            </article>
 
-            <section class="card" id="Lword">
+            <article class="card" id="Lword">
                 <div id="imagem"><img src="./img/thelword.gif"></div>
                 <ul>
                     <li><a href="https://www.sho.com/the-l-word" target="_blank">The L Word</a></li>
@@ -76,9 +76,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: Showtime, Hulu</li>
                 </ul>
-            </section>
+            </article>
 
-            <section class="card" id="genQ">
+            <article class="card" id="genQ">
                 <div id="imagem"><img src="./img/genq.gif"></div>
                 <ul>
                     <li><a href="https://www.sho.com/the-l-word-generation-q" target="_blank">The L Word Gen Q</a></li>
@@ -87,9 +87,9 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: Showtime, Hulu</li>
                  </ul>
-            </section>
+            </article>
 
-            <section class="card" id="daria">
+            <article class="card" id="daria">
                 <div id="imagem"><img src="./img/daria1.gif"></div>
                 <ul>
                     <li><a href="https://daria.fandom.com/wiki/Daria_Morgendorffer" target="_blank">Daria</a></li>
@@ -98,7 +98,7 @@
                     <li>Tem dublado</li>
                     <li>Você encontra em: MTV, Paramount+, Youtube</li>
                 </ul>
-            </section>
+            </article>
         </section>
 
     </main>
