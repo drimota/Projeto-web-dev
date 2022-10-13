@@ -223,20 +223,28 @@ function buscaShows() {
         alert("Digite algo para que a busca aconteça");
     } else {
         const seriesFiltradas = buscaSerie(objetos, search);
-        console.log(seriesFiltradas);
-
-        tvShow = `<article class="card" id="veronica">
-                <div id="imagem"> <img src="${seriesFiltradas[0].imagem}" alt="Verônica Mars piscando para a camera"/></div>
-                <ul>
-                    <li><a href="https://veronicamars.fandom.com/wiki/Veronica_Mars" target="_blank">${seriesFiltradas[0].titulo}</a></li>
-                    <li>Sinopse: ${seriesFiltradas[0].sinopse}</li>
-                    <li>Duração: ${seriesFiltradas[0].duracao} minutos </li>
-                    <li>Tem dublado? ${seriesFiltradas[0].dublado ? "sim" : "não"}</li>
-                    <li>Você encontra em: ${seriesFiltradas[0].disponivel}</li>
-                </ul>
-            </article>`;
-        document.querySelector('.objeto').innerHTML = "";
-        document.querySelector('.objeto').innerHTML = tvShow;
+        exibeSeries(seriesFiltradas)
 
     }
 }
+
+function exibeSeries(series) {
+    let objeto = document.getElementById("objeto")
+    objeto.innerHTML = ""
+    for (const serie of series) {
+        let tvShow
+    tvShow = `<article class="card">
+    <div id="imagem"> <img src="${serie.imagem}" alt="${serie.titulo}"/></div>
+    <ul>
+        <li>${serie.titulo}</li>
+        <li>Sinopse: ${serie.sinopse}</li>
+        <li>Duração: ${serie.duracao} minutos </li>
+        <li>Tem dublado? ${serie.dublado ? "sim" : "não"}</li>
+        <li>Você encontra em: ${serie.disponivel}</li>
+    </ul>
+    </article>`;
+    objeto.innerHTML += tvShow
+    }
+}
+
+exibeSeries(objetos)
